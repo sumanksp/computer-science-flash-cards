@@ -5,15 +5,15 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-nameDB='cards.db'
+nameDB='job2023.db'
 pathDB='db'
 
 def load_config():
     app.config.update(dict(
         DATABASE=os.path.join(app.root_path, pathDB, nameDB),
         SECRET_KEY='development key',
-        USERNAME='admin',
-        PASSWORD='default'
+        USERNAME='suman',
+        PASSWORD='suman'
     ))
     app.config.from_envvar('CARDS_SETTINGS', silent=True)
 
